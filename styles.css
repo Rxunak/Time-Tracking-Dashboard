@@ -1,0 +1,136 @@
+body {
+  background-color: hsl(226, 43%, 10%);
+  color: white;
+}
+
+main {
+  height: 99vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 330px);
+  width: 100%;
+  height: auto;
+  gap: 10px;
+  justify-content: center;
+}
+
+.gridItems {
+  outline: 2px solid pink;
+  width: 330px;
+  height: 300px;
+}
+
+.itemOne {
+  grid-row: 1 / span 3;
+  width: 330px;
+  height: 615px;
+  outline: none;
+  background-color: hsl(235, 46%, 20%);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.itemTwo {
+  position: relative;
+  background-image: url(/images/icon-work.svg);
+  background-color: hsl(15, 100%, 70%);
+  background-repeat: no-repeat;
+  background-position: 240px -10px;
+  outline: none;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.itemThree {
+  position: relative;
+  background-image: url(/images/icon-play.svg);
+  background-color: hsl(195, 74%, 62%);
+  background-repeat: no-repeat;
+  background-position: 240px -10px;
+  outline: none;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.itemFour {
+  position: relative;
+  background-image: url(/images/icon-study.svg);
+  background-color: hsl(348, 100%, 68%);
+  background-repeat: no-repeat;
+  background-position: 240px -10px;
+  outline: none;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.itemFive {
+  position: relative;
+  background-image: url(/images/icon-exercise.svg);
+  background-color: hsl(145, 58%, 55%);
+  background-repeat: no-repeat;
+  background-position: 240px 1px;
+  outline: none;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.itemSix {
+  position: relative;
+  background-image: url(/images/icon-social.svg);
+  background-color: hsl(264, 64%, 52%);
+  background-repeat: no-repeat;
+  background-position: 250px -10px;
+  outline: none;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.itemSeven {
+  position: relative;
+  background-image: url(/images/icon-self-care.svg);
+  background-color: hsl(43, 84%, 65%);
+  background-repeat: no-repeat;
+  background-position: 250px -10px;
+  outline: none;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.profileSection {
+  height: 450px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-color: hsl(246, 80%, 60%);
+}
+
+.informationDiv {
+  position: absolute;
+  top: 2.9rem;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-color: hsl(235, 46%, 20%);
+  height: 255px;
+  width: 100%;
+}
