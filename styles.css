@@ -1,6 +1,7 @@
 body {
   background-color: hsl(226, 43%, 10%);
   color: white;
+  font-family: "Rubik", sans-serif;
 }
 
 main {
@@ -15,20 +16,20 @@ main {
   grid-template-columns: repeat(4, 330px);
   width: 100%;
   height: auto;
-  gap: 10px;
+  row-gap: 80px;
   justify-content: center;
 }
 
 .gridItems {
   outline: 2px solid pink;
-  width: 330px;
-  height: 300px;
+  width: 300px;
+  height: 250px;
 }
 
 .itemOne {
   grid-row: 1 / span 3;
-  width: 330px;
-  height: 615px;
+  width: 300px;
+  height: 632px;
   outline: none;
   background-color: hsl(235, 46%, 20%);
   border-bottom-left-radius: 20px;
@@ -42,7 +43,7 @@ main {
   background-image: url(/images/icon-work.svg);
   background-color: hsl(15, 100%, 70%);
   background-repeat: no-repeat;
-  background-position: 240px -10px;
+  background-position: 210px -10px;
   outline: none;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -55,7 +56,7 @@ main {
   background-image: url(/images/icon-play.svg);
   background-color: hsl(195, 74%, 62%);
   background-repeat: no-repeat;
-  background-position: 240px -10px;
+  background-position: 210px -10px;
   outline: none;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -67,7 +68,7 @@ main {
   background-image: url(/images/icon-study.svg);
   background-color: hsl(348, 100%, 68%);
   background-repeat: no-repeat;
-  background-position: 240px -10px;
+  background-position: 210px -10px;
   outline: none;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -80,7 +81,7 @@ main {
   background-image: url(/images/icon-exercise.svg);
   background-color: hsl(145, 58%, 55%);
   background-repeat: no-repeat;
-  background-position: 240px 1px;
+  background-position: 210px 1px;
   outline: none;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -93,7 +94,7 @@ main {
   background-image: url(/images/icon-social.svg);
   background-color: hsl(264, 64%, 52%);
   background-repeat: no-repeat;
-  background-position: 250px -10px;
+  background-position: 210px -10px;
   outline: none;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -106,7 +107,7 @@ main {
   background-image: url(/images/icon-self-care.svg);
   background-color: hsl(43, 84%, 65%);
   background-repeat: no-repeat;
-  background-position: 250px -10px;
+  background-position: 210px -10px;
   outline: none;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -115,7 +116,7 @@ main {
 }
 
 .profileSection {
-  height: 450px;
+  height: 430px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   border-top-left-radius: 20px;
@@ -133,4 +134,66 @@ main {
   background-color: hsl(235, 46%, 20%);
   height: 255px;
   width: 100%;
+}
+
+.profileImage {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 1.5rem;
+  height: 5rem;
+  width: 5rem;
+  border: 3px solid white;
+  border-radius: 50%;
+}
+
+.profileName {
+  margin-left: 1.5rem;
+  margin-bottom: 0;
+  font-size: 0.8rem;
+  font-weight: 100;
+}
+
+.profileTitle {
+  margin-left: 1.5rem;
+  line-height: 100%;
+  margin-top: 2px;
+  font-weight: 100;
+  font-size: 3rem;
+}
+
+.options {
+  color: hsl(235, 45%, 61%);
+  margin-left: 1.5rem;
+}
+
+.options:hover {
+  cursor: pointer;
+  color: white;
+}
+
+.informationPara {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.elipses {
+  height: 0.3rem;
+}
+
+.informationTime {
+  font-size: 4rem;
+  font-weight: 100;
+  margin-top: 3rem;
+  margin-left: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.informationDes {
+  margin-left: 2rem;
+  margin-top: 0;
+  font-weight: 100;
 }
