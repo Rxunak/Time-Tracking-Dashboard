@@ -166,7 +166,6 @@ main {
   color: hsl(235, 45%, 61%);
   margin-left: 1.5rem;
   margin-bottom: 2rem;
-  
 }
 
 .options:hover {
@@ -200,4 +199,12 @@ main {
   margin-top: 0;
   font-weight: 100;
   color: hsl(236, 100%, 87%);
+}
+
+.hover.changeBackground {
+  background-color: hsl(235, 45%, 61%);
+}
+
+.elipses.change {
+  background-color: hsl(235, 46%, 20%);
 }
