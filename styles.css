@@ -162,11 +162,10 @@ main {
   font-size: 3rem;
 }
 
-.optionContainer{
+.optionContainer {
   display: flex;
   flex-direction: column;
   width: 100px;
-  
 }
 
 .options {
@@ -177,10 +176,14 @@ main {
   background: none;
   font-size: 1rem;
   text-align: left;
-  
 }
 
 .options:focus {
+  cursor: pointer;
+  color: white;
+}
+
+#weekly.test {
   cursor: pointer;
   color: white;
 }
