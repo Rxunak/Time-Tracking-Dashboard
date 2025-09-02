@@ -42,10 +42,6 @@ const appendItem = (data) => {
 
 const appendTime = (data, text) => {
   const dayButtonText = dailyTime.innerText.toLowerCase();
-
-  console.log(dayButtonText);
-  console.log(text);
-
   if (text === "daily") {
     container.forEach((item, index) => {
       const pTag = document.createElement("p");
@@ -81,12 +77,13 @@ const fetchedDated = (data) => {
     pTag.innerText = data[index].timeframes.weekly.current + "hrs";
     pTag.classList.add("informationTime");
     item.innerText = "";
-
     item.appendChild(pTag);
+    test()
   });
 };
 
 function test() {
+
   weeklyTime.classList.add("test");
 }
 
