@@ -4,6 +4,7 @@ const mainContainer = document.querySelectorAll(".informationPara");
 const informationTimeSetion = document.querySelectorAll(".informationTime");
 const options = document.querySelectorAll(".options");
 const container = document.querySelectorAll(".mainContainer");
+const infoDescription = document.querySelectorAll(".informationDes");
 
 const dailyTime = document.getElementById("daily");
 const weeklyTime = document.getElementById("weekly");
@@ -71,6 +72,22 @@ const appendTime = (data, text) => {
   }
 };
 
+const updateHours = (data, text) => {
+  if (text === "daily") {
+    infoDescription.forEach((item, index) => {
+      item.textContent = `Last Week - ${data[index].timeframes[text].previous}hrs`;
+    });
+  } else if (text === "weekly") {
+    infoDescription.forEach((item, index) => {
+      item.textContent = `Last Week - ${data[index].timeframes[text].previous}hrs`;
+    });
+  } else if (text == "monthly") {
+    infoDescription.forEach((item, index) => {
+      item.textContent = `Last Week - ${data[index].timeframes[text].previous}hrs`;
+    });
+  }
+};
+
 const fetchedDated = (data) => {
   container.forEach((item, index) => {
     const pTag = document.createElement("p");
@@ -78,12 +95,15 @@ const fetchedDated = (data) => {
     pTag.classList.add("informationTime");
     item.innerText = "";
     item.appendChild(pTag);
-    test()
+    test();
+  });
+
+  infoDescription.forEach((item, index) => {
+    item.textContent = `Last Week - ${data[index].timeframes.weekly.previous}hrs`;
   });
 };
 
 function test() {
-
   weeklyTime.classList.add("test");
 }
 
@@ -110,6 +130,7 @@ fetch("/data.json")
       button.addEventListener("click", () => {
         const test = button.innerText.toLowerCase();
         appendTime(data, test);
+        updateHours(data, test);
       });
     });
   });

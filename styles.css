@@ -2,6 +2,7 @@ body {
   background-color: hsl(226, 43%, 10%);
   color: white;
   font-family: "Rubik", sans-serif;
+  /* margin: 0; */
 }
 
 main {
@@ -13,15 +14,15 @@ main {
 
 .container {
   display: grid;
-  grid-template-columns: repeat(4, 330px);
+  grid-template-columns: repeat(4, auto);
   width: 100%;
   height: auto;
   row-gap: 80px;
+  column-gap: 30px;
   justify-content: center;
 }
 
 .gridItems {
-  outline: 2px solid pink;
   width: 300px;
   height: 250px;
 }
@@ -222,4 +223,130 @@ main {
 
 .elipses.change {
   background-color: hsl(235, 46%, 20%);
+}
+
+@media (max-width: 1024px) {
+  .container {
+    width: 100%;
+  }
+  .gridItems {
+    width: 232px;
+  }
+
+  .itemTwo {
+    background-position: 135px -10px;
+  }
+
+  .itemThree {
+    background-position: 135px -10px;
+  }
+
+  .itemFour {
+    background-position: 135px -10px;
+  }
+
+  .itemFive {
+    background-position: 135px -1px;
+  }
+
+  .itemSix {
+    background-position: 145px -10px;
+  }
+
+  .itemSeven {
+    background-position: 145px -10px;
+  }
+
+  .informationTime {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    margin: 0;
+  }
+  .container {
+    grid-template-columns: repeat(3, auto);
+    height: 100vh;
+    row-gap: 20px;
+  }
+
+  .gridItems {
+    width: 200px;
+  }
+  .itemOne {
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 1;
+    width: 100%;
+    height: auto;
+  }
+
+  .profileSection {
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0;
+  }
+
+  .name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.4rem;
+  }
+
+  .profileTitle {
+    margin-bottom: 0;
+    font-size: 2rem;
+  }
+
+  .profileName {
+    margin-top: 0;
+  }
+
+  .optionContainer {
+    flex-direction: row;
+
+    width: 100%;
+    justify-content: center;
+    gap: 60px;
+    height: 70px;
+    align-items: center;
+  }
+
+  .options {
+    margin: 0;
+  }
+  .informationDiv {
+    height: 205px;
+  }
+
+  .itemTwo {
+    background-position: 105px -10px;
+  }
+
+  .itemThree {
+    background-position: 105px -10px;
+  }
+
+  .itemFour {
+    background-position: 105px -10px;
+  }
+
+  .itemFive {
+    background-position: 105px -1px;
+  }
+
+  .itemSix {
+    background-position: 115px -10px;
+  }
+
+  .itemSeven {
+    background-position: 115px -10px;
+  }
+
+ .informationTime {
+    font-size: 2.5rem;
+  }
 }
