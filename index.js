@@ -50,6 +50,8 @@ const appendTime = (data, text) => {
       pTag.classList.add("informationTime");
       item.innerText = "";
       weeklyTime.classList.remove("test");
+      dailyTime.classList.add("changeHover");
+      monthlyTime.classList.remove("changeHover");
       item.appendChild(pTag);
     });
   } else if (text === "weekly") {
@@ -57,6 +59,8 @@ const appendTime = (data, text) => {
       const pTag = document.createElement("p");
       pTag.innerText = data[index].timeframes[text].current + "hrs";
       pTag.classList.add("informationTime");
+      dailyTime.classList.remove("changeHover");
+      monthlyTime.classList.remove("changeHover");
       item.innerText = "";
       item.appendChild(pTag);
     });
@@ -67,6 +71,8 @@ const appendTime = (data, text) => {
       pTag.classList.add("informationTime");
       item.innerText = "";
       weeklyTime.classList.remove("test");
+      monthlyTime.classList.add("changeHover");
+      dailyTime.classList.remove("changeHover");
       item.appendChild(pTag);
     });
   }
