@@ -1,7 +1,6 @@
 const informationDiv = document.querySelectorAll(".hover");
 const elip = document.querySelectorAll(".elipses");
 const mainContainer = document.querySelectorAll(".informationPara");
-const informationTimeSetion = document.querySelectorAll(".informationTime");
 const options = document.querySelectorAll(".options");
 const container = document.querySelectorAll(".mainContainer");
 const infoDescription = document.querySelectorAll(".informationDes");
@@ -87,7 +86,7 @@ const updateHours = (data, text) => {
     infoDescription.forEach((item, index) => {
       item.textContent = `Last Week - ${data[index].timeframes[text].previous}hrs`;
     });
-  } else if (text == "monthly") {
+  } else if (text === "monthly") {
     infoDescription.forEach((item, index) => {
       item.textContent = `Last Week - ${data[index].timeframes[text].previous}hrs`;
     });
@@ -113,12 +112,6 @@ function test() {
   weeklyTime.classList.add("test");
 }
 
-const sendData = (data) => {
-  for (const info of data) {
-    pullHours(info);
-  }
-};
-
 fetch("/data.json")
   .then((response) => {
     if (!response.ok) return console.log("Sorry there was an error!");
@@ -134,9 +127,9 @@ fetch("/data.json")
 
     options.forEach((button) => {
       button.addEventListener("click", () => {
-        const test = button.innerText.toLowerCase();
-        appendTime(data, test);
-        updateHours(data, test);
+        const buttonText = button.innerText.toLowerCase();
+        appendTime(data, buttonText);
+        updateHours(data, buttonText);
       });
     });
   });
