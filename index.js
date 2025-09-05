@@ -41,56 +41,31 @@ const appendItem = (data) => {
 };
 
 const appendTime = (data, text) => {
-  const dayButtonText = dailyTime.innerText.toLowerCase();
+  dailyTime.classList.remove("changeHover", "test");
+  weeklyTime.classList.remove("changeHover", "test");
+  monthlyTime.classList.remove("changeHover", "test");
+
   if (text === "daily") {
-    container.forEach((item, index) => {
-      const pTag = document.createElement("p");
-      pTag.innerText = data[index].timeframes[text].current + "hrs";
-      pTag.classList.add("informationTime");
-      item.innerText = "";
-      weeklyTime.classList.remove("test");
-      dailyTime.classList.add("changeHover");
-      monthlyTime.classList.remove("changeHover");
-      item.appendChild(pTag);
-    });
+    dailyTime.classList.add("changeHover");
   } else if (text === "weekly") {
-    container.forEach((item, index) => {
-      const pTag = document.createElement("p");
-      pTag.innerText = data[index].timeframes[text].current + "hrs";
-      pTag.classList.add("informationTime");
-      dailyTime.classList.remove("changeHover");
-      monthlyTime.classList.remove("changeHover");
-      item.innerText = "";
-      item.appendChild(pTag);
-    });
+    weeklyTime.classList.add("test");
   } else if (text === "monthly") {
-    container.forEach((item, index) => {
-      const pTag = document.createElement("p");
-      pTag.innerText = data[index].timeframes[text].current + "hrs";
-      pTag.classList.add("informationTime");
-      item.innerText = "";
-      weeklyTime.classList.remove("test");
-      monthlyTime.classList.add("changeHover");
-      dailyTime.classList.remove("changeHover");
-      item.appendChild(pTag);
-    });
+    monthlyTime.classList.add("changeHover");
   }
+
+  container.forEach((item, index) => {
+    const pTag = document.createElement("p");
+    pTag.innerText = data[index].timeframes[text].current + "hrs";
+    pTag.classList.add("informationTime");
+    item.innerText = "";
+    item.appendChild(pTag);
+  });
 };
 
 const updateHours = (data, text) => {
-  if (text === "daily") {
-    infoDescription.forEach((item, index) => {
-      item.textContent = `Last Week - ${data[index].timeframes[text].previous}hrs`;
-    });
-  } else if (text === "weekly") {
-    infoDescription.forEach((item, index) => {
-      item.textContent = `Last Week - ${data[index].timeframes[text].previous}hrs`;
-    });
-  } else if (text === "monthly") {
-    infoDescription.forEach((item, index) => {
-      item.textContent = `Last Week - ${data[index].timeframes[text].previous}hrs`;
-    });
-  }
+  infoDescription.forEach((item, index) => {
+    item.textContent = `Last Week - ${data[index].timeframes[text].previous}hrs`;
+  });
 };
 
 const fetchedDated = (data) => {
@@ -100,12 +75,13 @@ const fetchedDated = (data) => {
     pTag.classList.add("informationTime");
     item.innerText = "";
     item.appendChild(pTag);
-    test();
   });
 
   infoDescription.forEach((item, index) => {
     item.textContent = `Last Week - ${data[index].timeframes.weekly.previous}hrs`;
   });
+
+  test();
 };
 
 function test() {
